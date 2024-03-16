@@ -17,14 +17,17 @@ function Pokemon({ pokemon, language }) {
   return (
     <div className="pokemon-card">
       <img src={pokemon.image} alt={pokemon.name.english} className="pokemon-image" />
-      <div className="pokemon-details">
-        <p>ID: {pokemon.id}</p>
-        <p>Name: {getNameByLanguage()}</p>
-        <p>Type: {pokemon.type.join(', ')}</p>
-        <p>HP: {pokemon.base.HP}</p>
-        <p>Attack: {pokemon.base.Attack}</p>
-        <p>Defense: {pokemon.base.Defense}</p>
+      <div class="id-pokemon">
+      <p>[{pokemon.id}]  {getNameByLanguage()} </p>
       </div>
+      
+      <div className="pokemon-details">
+        <p className='border'>{pokemon.type.join('  ')}</p>
+        <p>HP: {pokemon.base.HP}  </p>
+        <p>Attack: {pokemon.base.Attack}</p>
+        <p>Defense: {pokemon.base.Defense} </p>
+        <p>Speed: {pokemon.base.Speed}</p>
+        </div>
     </div>
   );
 }

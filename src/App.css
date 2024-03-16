@@ -1,18 +1,30 @@
 
-
 .pokemon-card {
   border: 1px solid black;
   padding: 10px;
   margin: 10px;
-  width: calc(33.33% - 20px); /* Adjust the width to fit three cards per row */
+  width: calc(33.33% - 20px); 
   box-sizing: border-box;
+  
 }
 
 .pokemon-image {
   width: 100px;
   height: 100px;
+  transform: translate(130%, 0%);  
+  
 }
 
+.id-pokemon{
+  text-align: center;
+}
 .pokemon-details {
   padding-top: 10px;
+}
+
+.border{
+  width: 40%;
+  text-align: center;
+  border: 1px solid red;
+  border-radius: 5px;
 }
