@@ -18,13 +18,51 @@
 .id-pokemon{
   text-align: center;
 }
+
 .pokemon-details {
-  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.border{
-  width: 40%;
+.group {
+  width: 90%; 
+  display: flex;
+  justify-content: space-between;
   text-align: center;
-  border: 1px solid red;
+  margin-right: 20px;
+  flex-direction: row;
+  margin-left:20%;
+}
+
+.group p {
+  flex: 1; 
+  margin: 0; 
+  text-align: justify;
+}
+
+
+.border{
+  width: 20%;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+}
+
+.type-container{
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button-container button {
+  margin: 5px;
+  border: 1px solid black;
   border-radius: 5px;
+  padding: 5px 10px;
 }

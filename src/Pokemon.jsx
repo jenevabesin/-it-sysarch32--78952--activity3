@@ -21,13 +21,27 @@ function Pokemon({ pokemon, language }) {
       <p>[{pokemon.id}]  {getNameByLanguage()} </p>
       </div>
       
-      <div className="pokemon-details">
-        <p className='border'>{pokemon.type.join('  ')}</p>
-        <p>HP: {pokemon.base.HP}  </p>
-        <p>Attack: {pokemon.base.Attack}</p>
-        <p>Defense: {pokemon.base.Defense} </p>
-        <p>Speed: {pokemon.base.Speed}</p>
+      <div className="type-container">
+          {pokemon.type.map((type, index) => (
+            <p key={index} className='border'>{type}</p>
+          ))}
         </div>
+
+   <div className="pokemon-details">
+          <div className="group">
+            <p>HP: {pokemon.base.HP}</p>
+            <p>Speed: {pokemon.base.Speed}</p>
+       </div>
+       <div className="group">
+           <p>Attack: {pokemon.base.Attack}</p>
+           <p>Sp.Attk: {pokemon.base['Sp. Attack']}</p>
+       </div>
+       <div className="group">
+          <p>Defense: {pokemon.base.Defense}</p>
+          <p>Sp.Defense: {pokemon.base['Sp. Defense']}</p>
+     </div>
+  </div>
+
     </div>
   );
 }
